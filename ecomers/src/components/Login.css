@@ -1,0 +1,49 @@
+.opciones-login{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:18px 0 25px;
+    font-size:14px;
+}
+
+.opciones-login a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#2563eb;
+    text-decoration:none;
+}
+
+.opciones-login a:hover{
+    text-decoration:underline;
+}
+
+.icono-link{
+    font-size:15px;
+}
+
+.google,
+.github{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.registro{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    margin-top:25px;
+    color:#666;
+}
+
+.registro strong{
+    color:#2563eb;
+    cursor:pointer;
+}
+
+.registro strong:hover{
+    text-decoration:underline;
+}

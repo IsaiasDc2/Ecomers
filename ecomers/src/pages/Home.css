@@ -1,0 +1,91 @@
+.home-container {
+
+  max-width:1200px;
+
+  margin:0 auto;
+
+  padding:2.5rem 2rem 5rem;
+
+}
+
+
+
+/* Título principal */
+
+.home-container h1 {
+
+  font-family:var(--font-base);
+
+  font-size:2.4rem;
+
+  font-weight:800;
+
+  color:var(--text-h);
+
+  letter-spacing:-.03em;
+
+  margin-bottom:.5rem;
+
+}
+
+
+
+.home-container h1::after {
+
+  content:"";
+
+  display:block;
+
+
+  width:70px;
+
+  height:4px;
+
+
+  margin-top:15px;
+
+
+  border-radius:20px;
+
+
+  background:
+  linear-gradient(
+    90deg,
+    var(--primary),
+    var(--accent)
+  );
+
+}
+
+
+
+/* Separación con productos */
+
+.home-container > .productos {
+
+  margin-top:40px;
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:768px){
+
+
+  .home-container {
+
+    padding:1.5rem 1rem 3rem;
+
+  }
+
+
+
+  .home-container h1 {
+
+    font-size:1.8rem;
+
+  }
+
+}

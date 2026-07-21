@@ -1,0 +1,304 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    background:#f5f6fa;
+    font-family:"Segoe UI", sans-serif;
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.cuenta{
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    display:grid;
+
+    grid-template-columns:260px 1fr;
+
+    gap:35px;
+
+    padding:0 20px;
+
+}
+
+
+
+/* SIDEBAR */
+
+.sidebar{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    height:max-content;
+
+}
+
+
+.sidebar h2{
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+    color:white;
+
+    padding:25px;
+
+    text-align:center;
+
+    font-size:22px;
+
+}
+
+
+
+.sidebar button{
+
+    width:100%;
+
+    padding:18px 25px;
+
+    background:white;
+
+    border:none;
+
+    border-bottom:1px solid #eee;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    color:#444;
+
+    text-align:left;
+
+    transition:.3s;
+
+}
+
+
+
+.sidebar button:hover{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    padding-left:35px;
+
+}
+
+
+
+.sidebar button:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+/* CONTENIDO */
+
+.contenido{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+}
+
+
+
+/* FORMULARIO LOGIN / REGISTRO */
+
+.login{
+
+
+    width:100%;
+
+    max-width:520px;
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.10);
+
+}
+
+
+
+.login h2{
+
+    text-align:center;
+
+    font-size:32px;
+
+    color:#111827;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.login input{
+
+
+    width:100%;
+
+    padding:16px;
+
+    margin-bottom:20px;
+
+    border-radius:12px;
+
+    border:1px solid #ddd;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+
+
+.login input:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+
+
+.login button{
+
+    width:100%;
+
+    padding:16px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+.login button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+
+
+.login p{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#6b7280;
+
+}
+
+
+
+.login a{
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+
+
+/* TARJETAS PEDIDOS/FAVORITOS */
+
+.card-cuenta{
+
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    width:100%;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+
+.cuenta{
+
+    grid-template-columns:1fr;
+
+    margin:20px auto;
+
+}
+
+
+.sidebar{
+
+    width:100%;
+
+}
+
+
+.login{
+
+    padding:30px;
+
+}
+
+
+}

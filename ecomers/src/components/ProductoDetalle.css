@@ -1,0 +1,518 @@
+.detalle-container {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 30px 20px 70px;
+
+  font-family: var(--font-base);
+
+}
+
+
+/* Volver */
+
+.volver {
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  margin-bottom:25px;
+
+  color:var(--text-muted);
+
+  font-weight:600;
+
+  transition:.3s;
+
+}
+
+
+.volver:hover {
+
+  color:var(--accent);
+
+}
+
+
+
+/* Estados */
+
+.detalle-estado {
+
+  text-align:center;
+
+  padding:80px 20px;
+
+  color:var(--text);
+
+}
+
+
+
+/* Grid */
+
+.detalle-grid {
+
+  display:grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap:50px;
+
+}
+
+
+@media(max-width:720px){
+
+  .detalle-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+
+
+.detalle-imagen {
+
+  position: sticky;
+
+  top: 100px;
+
+  height: fit-content;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+
+.detalle-imagen::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+
+  height: 350px;
+
+  background: radial-gradient(
+    circle,
+    rgba(6,182,212,.18),
+    transparent 70%
+  );
+
+  filter: blur(20px);
+
+  z-index: -1;
+
+}
+
+
+
+.detalle-imagen img {
+
+  width: 100%;
+
+  max-width: 480px;
+
+  height: 450px;
+
+
+  object-fit: contain;
+
+
+  padding: 25px;
+
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.01)
+    );
+
+
+  border:1px solid var(--border);
+
+
+  border-radius:24px;
+
+
+  box-shadow:
+
+    0 20px 50px rgba(0,0,0,.45),
+
+    0 0 40px rgba(6,182,212,.12);
+
+
+  transition:.4s ease;
+
+
+  animation: aparecer .6s ease;
+
+}
+
+
+
+.detalle-imagen img:hover {
+
+  transform:
+    translateY(-8px)
+    scale(1.03);
+
+
+  border-color:var(--accent);
+
+
+  box-shadow:
+
+    0 25px 60px rgba(0,0,0,.5),
+
+    0 0 35px rgba(6,182,212,.35);
+
+}
+
+
+
+/* Animación entrada */
+
+@keyframes aparecer {
+
+  from {
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+  }
+
+
+  to {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+
+
+/* En celular quitar sticky */
+
+@media(max-width:720px){
+
+  .detalle-imagen {
+
+    position:relative;
+
+    top:0;
+
+  }
+
+
+  .detalle-imagen img {
+
+    height:350px;
+
+  }
+
+}
+
+
+/* Información */
+
+.detalle-info {
+
+  background:var(--bg-card);
+
+  border:1px solid var(--border);
+
+  border-radius:20px;
+
+  padding:30px;
+
+  box-shadow:var(--shadow);
+
+}
+
+
+
+.detalle-marca {
+
+  color:var(--accent);
+
+  font-size:.8rem;
+
+  font-weight:700;
+
+  letter-spacing:.1em;
+
+  text-transform:uppercase;
+
+}
+
+
+
+.detalle-info h1 {
+
+  color:var(--text-h);
+
+  font-size:2rem;
+
+  margin:15px 0;
+
+}
+
+
+
+.detalle-categoria {
+
+  color:var(--text-muted);
+
+  margin-bottom:20px;
+
+}
+
+
+
+/* Descripción */
+
+.detalle-descripcion {
+
+  color:var(--text);
+
+  line-height:1.6;
+
+  margin-bottom:25px;
+
+}
+
+
+
+/* Precio */
+
+.detalle-precio strong {
+
+  display:block;
+
+  color:white;
+
+  font-size:2rem;
+
+  font-weight:800;
+
+  margin:10px 0;
+
+}
+
+
+
+.precio-anterior {
+
+  color:var(--text-muted);
+
+  text-decoration:line-through;
+
+  margin-right:10px;
+
+}
+
+
+
+.cuotas {
+
+  color:var(--text-muted);
+
+}
+
+
+.envio {
+
+  color:var(--success);
+
+  font-weight:600;
+
+}
+
+
+
+/* Stock */
+
+.detalle-stock {
+
+  margin:20px 0;
+
+  font-weight:600;
+
+}
+
+
+.disponible {
+
+  color:var(--success);
+
+}
+
+
+.sin-stock {
+
+  color:var(--danger);
+
+}
+
+
+
+/* Botón */
+
+.detalle-info .btn-carrito {
+
+  width:100%;
+
+  padding:14px;
+
+
+  border:none;
+
+  border-radius:12px;
+
+
+  background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--accent)
+  );
+
+
+  color:white;
+
+  font-size:1rem;
+
+  font-weight:700;
+
+
+  cursor:pointer;
+
+
+  transition:.3s;
+
+}
+
+
+
+.detalle-info .btn-carrito:hover {
+
+  transform:translateY(-3px);
+
+  box-shadow:
+  0 0 25px rgba(6,182,212,.35);
+
+}
+
+
+
+.detalle-info .btn-carrito:disabled {
+
+  opacity:.5;
+
+  cursor:not-allowed;
+
+}
+
+
+
+/* Especificaciones */
+
+.detalle-especificaciones {
+
+  margin-top:35px;
+
+}
+
+
+.detalle-especificaciones h2 {
+
+  color:white;
+
+  font-size:1.3rem;
+
+  margin-bottom:15px;
+
+}
+
+
+
+.detalle-especificaciones table {
+
+  width:100%;
+
+  border-collapse:collapse;
+
+  background:#111827;
+
+  border-radius:12px;
+
+  overflow:hidden;
+
+}
+
+
+
+.detalle-especificaciones tr {
+
+  border-bottom:1px solid var(--border);
+
+}
+
+
+
+.detalle-especificaciones td {
+
+  padding:14px 10px;
+
+  color:var(--text);
+
+}
+
+
+
+.detalle-especificaciones .clave {
+
+  width:45%;
+
+  color:var(--text-muted);
+
+  font-weight:600;
+
+}
+
+
+
+.detalle-especificaciones .valor {
+
+  color:white;
+
+  font-weight:500;
+
+}
+@media(max-width:720px){
+
+  .detalle-imagen {
+
+    position: static;
+
+  }
+
+}

@@ -1,0 +1,202 @@
+.banner-swiper {
+
+    width:100%;
+
+    height:450px;
+
+    margin-bottom:50px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.35);
+
+}
+
+
+
+.banner-slide {
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+
+
+.banner-slide img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform 8s ease;
+
+}
+
+
+
+.swiper-slide-active img {
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* Oscurecer imagen */
+
+.banner-slide::after {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.25)
+    );
+
+}
+
+
+
+/* Texto */
+
+.banner-overlay {
+
+    position:absolute;
+
+    top:50%;
+
+    left:60px;
+
+    transform:translateY(-50%);
+
+    z-index:2;
+
+    color:white;
+
+    max-width:500px;
+
+}
+
+
+
+.banner-overlay h2 {
+
+    font-size:3rem;
+
+    font-weight:800;
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.banner-overlay p {
+
+    font-size:1.2rem;
+
+    color:#d1d5db;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.banner-overlay button {
+
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--accent)
+    );
+
+
+    color:white;
+
+
+    border:none;
+
+
+    padding:14px 30px;
+
+
+    border-radius:12px;
+
+
+    font-weight:700;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+}
+
+
+
+.banner-overlay button:hover {
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 25px rgba(6,182,212,.4);
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .banner-swiper {
+
+        height:320px;
+
+        border-radius:15px;
+
+    }
+
+
+    .banner-overlay {
+
+        left:25px;
+
+    }
+
+
+    .banner-overlay h2 {
+
+        font-size:2rem;
+
+    }
+
+
+    .banner-overlay p {
+
+        font-size:1rem;
+
+    }
+
+}
