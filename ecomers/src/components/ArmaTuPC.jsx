@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ArmaTuPC.css";
 
-const API = "http://localhost:3000/productos";
+const API = "/api/productos";
 
 const pasos = [
   "Procesador",

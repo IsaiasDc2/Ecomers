@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./ProductoDetalle.css";
 
-const API_URL = "http://localhost:3000/productos";
+const API = "/api/productos";
 
 
 function formatearClave(clave) {

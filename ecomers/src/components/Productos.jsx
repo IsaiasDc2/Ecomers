@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import ProductCard from "./ProductCard";
 import "./Productos.css";
 
-const API_URL = "http://localhost:3000/productos";
+const API_URL = "/api/productos";
 
 
 function Productos({ agregarAlCarrito }) {

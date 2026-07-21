@@ -13,7 +13,7 @@ function Ofertas({ agregarAlCarrito }) {
 
   useEffect(() => {
 
-    fetch("http://localhost:3000/productos")
+    fetch("/api/productos")
       .then(res => res.json())
       .then(data => {
 
