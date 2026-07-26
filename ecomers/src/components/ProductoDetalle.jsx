@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { supabase } from "../supabaseClient";
 import "./ProductoDetalle.css";
-
-const API = "/api/productos";
-
 
 function formatearClave(clave) {
   const conEspacios = clave.replace(/([A-Z])/g, " $1").toLowerCase();
@@ -18,18 +16,29 @@ function ProductoDetalle({ agregarAlCarrito }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setCargando(true);
-    setError(null);
-    setProducto(null);
+    async function cargarProducto() {
+      try {
+        setCargando(true);
+        setError(null);
+        setProducto(null);
 
-    fetch(`${API_URL}/${id}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Producto no encontrado");
-        return res.json();
-      })
-      .then((data) => setProducto(data))
-      .catch((err) => setError(err.message))
-      .finally(() => setCargando(false));
+        const { data, error } = await supabase
+          .from("productos")
+          .select("*")
+          .eq("id", id)
+          .single();
+
+        if (error) throw new Error("Producto no encontrado");
+
+        setProducto(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setCargando(false);
+      }
+    }
+
+    cargarProducto();
   }, [id]);
 
   if (cargando) {

@@ -8,9 +8,8 @@ import {
   FaEye
 } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { supabase } from "../supabaseClient";
 import "./Novedades.css";
-
-const API = "http://localhost:3000/productos";
 
 function Novedades({ agregarAlCarrito }) {
 
@@ -20,20 +19,25 @@ function Novedades({ agregarAlCarrito }) {
 
   useEffect(() => {
 
-    fetch(API)
-      .then((res) => res.json())
-      .then((data) => {
+    async function cargarNovedades() {
+      try {
+        const { data, error } = await supabase
+          .from("productos")
+          .select("*");
 
-        setProductos(data.slice(-8).reverse());
-        setCargando(false);
+        if (error) throw new Error(error.message);
 
-      })
-      .catch((err) => {
+        const lista = Array.isArray(data) ? data : [];
+        setProductos(lista.slice(-8).reverse());
 
+      } catch (err) {
         console.error(err);
+      } finally {
         setCargando(false);
+      }
+    }
 
-      });
+    cargarNovedades();
 
   }, []);
 
