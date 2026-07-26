@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
+import { supabase } from "../supabaseClient";
 import ProductCard from "./ProductCard";
 import "./Productos.css";
-
-const API_URL = "/api/productos";
 
 
 function Productos({ agregarAlCarrito }) {
@@ -45,21 +44,17 @@ function Productos({ agregarAlCarrito }) {
 
 
 
-        const respuesta = await fetch(API_URL);
+        const { data, error } = await supabase
+          .from("productos")
+          .select("*");
 
 
 
-        if(!respuesta.ok){
+        if(error){
 
-          throw new Error(
-            "No se pudieron cargar los productos"
-          );
+          throw new Error(error.message);
 
         }
-
-
-
-        const data = await respuesta.json();
 
 
 
