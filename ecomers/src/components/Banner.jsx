@@ -1,9 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
-import compu from "../assets/compu.jpg";
-import escritorio from "../assets/escritorio.jpg";
-import rtx from "../assets/rtx.jpg";
+import compu from "../assets/compu.webp";
+import escritorio from "../assets/escritorio.webp"
+import rtx from "../assets/rtx.webp";
 
 import "swiper/css";
 import "./Banner.css";
