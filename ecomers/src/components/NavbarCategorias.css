@@ -21,8 +21,6 @@
 }
 
 
-/* Contenedor */
-
 .menu {
 
     max-width:1200px;
@@ -45,8 +43,6 @@
 }
 
 
-
-/* Links */
 
 .menu > a,
 .dropdown-btn {
@@ -95,8 +91,6 @@
 
 
 
-/* Dropdown */
-
 .dropdown {
 
     position:relative;
@@ -113,7 +107,6 @@
 
 
 
-/* Menu desplegable */
 
 .dropdown-menu {
 
@@ -176,8 +169,6 @@
 
 
 
-/* Mostrar */
-
 .dropdown:hover .dropdown-menu {
 
 
@@ -194,8 +185,6 @@
 }
 
 
-
-/* Items */
 
 .dropdown-menu a {
 
@@ -244,7 +233,6 @@
 
 
 
-/* Responsive */
 
 @media(max-width:768px){
 

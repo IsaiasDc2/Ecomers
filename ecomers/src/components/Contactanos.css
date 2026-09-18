@@ -12,7 +12,6 @@
 
 
 
-/* Titulo */
 
 .contacto-container > h1 {
 
@@ -70,9 +69,6 @@
 
 
 
-
-
-/* Formulario */
 
 
 .formulario {
@@ -134,9 +130,6 @@
 
 
 
-
-
-/* Campos */
 
 
 .grupo {
@@ -254,9 +247,6 @@
 
 
 
-
-/* Error */
-
 .grupo input:invalid:not(:placeholder-shown),
 .grupo textarea:invalid:not(:placeholder-shown) {
 
@@ -268,9 +258,6 @@
 
 
 
-
-
-/* Boton */
 
 
 .formulario button[type="submit"] {

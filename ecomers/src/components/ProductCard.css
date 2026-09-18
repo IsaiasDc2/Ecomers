@@ -37,7 +37,6 @@
 
 
 
-/* Imagen */
 
 .producto-detalle {
 
@@ -73,8 +72,6 @@
 
 
 
-/* Nombre */
-
 .producto-detalle h3 {
 
   font-size: 1rem;
@@ -103,7 +100,6 @@
 
 
 
-/* Categoria */
 
 .categoria {
 
@@ -121,7 +117,6 @@
 
 
 
-/* Oferta */
 
 .oferta {
 
@@ -154,8 +149,6 @@
 
 
 
-
-/* Favorito */
 
 .favorito {
 
@@ -210,8 +203,6 @@
 
 
 
-/* Stock */
-
 .stock {
 
   margin: .5rem 0;
@@ -222,7 +213,6 @@
 
 
 
-/* Precio */
 
 .precios {
 
@@ -260,7 +250,6 @@
 
 
 
-/* Cuotas */
 
 .cuotas {
 
@@ -272,7 +261,6 @@
 
 
 
-/* Envio */
 
 .envio {
 
@@ -286,7 +274,6 @@
 
 
 
-/* Boton */
 
 .btn-carrito {
 

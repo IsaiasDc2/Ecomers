@@ -10,7 +10,6 @@
 
 
 
-/* TITULO */
 
 .arma-container h1 {
 
@@ -28,7 +27,7 @@
 
 
 
-/* PASOS */
+
 
 .progreso {
 
@@ -126,9 +125,6 @@
 
 
 
-/* TITULO PASO */
-
-
 .arma-container h2 {
 
 
@@ -147,7 +143,6 @@
 
 
 
-/* GRID COMPONENTES */
 
 
 .productos-armado {
@@ -172,8 +167,6 @@
 
 
 
-
-/* TARJETAS */
 
 
 .componente {
@@ -327,9 +320,6 @@
 
 
 
-/* SELECCIONADO */
-
-
 .componente.seleccionado {
 
 
@@ -368,7 +358,6 @@
 
 
 
-/* BOTONES */
 
 
 .botones {
@@ -455,7 +444,6 @@
 
 
 
-/* RESUMEN */
 
 
 .resumen {
@@ -589,8 +577,6 @@
 
 
 
-/* BOTON FINAL */
-
 
 .btn-carrito-pc {
 
@@ -656,8 +642,6 @@
 
 
 
-
-/* MOBILE */
 
 
 @media(max-width:700px){

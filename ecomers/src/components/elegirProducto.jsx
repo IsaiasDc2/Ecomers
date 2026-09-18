@@ -25,3 +25,5 @@ function elegirProducto(producto){
 
 
 }
+
+export default  elegirProducto;

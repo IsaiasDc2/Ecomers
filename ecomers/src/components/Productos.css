@@ -6,7 +6,6 @@
 }
 
 
-/* TITULO */
 
 .productos-container > h1 {
 
@@ -49,11 +48,6 @@
 
 
 
-/* =====================
-   FILTROS
-===================== */
-
-
 .filtros {
 
   display:flex;
@@ -87,7 +81,6 @@
 
 
 
-/* Inputs */
 
 
 .filtros input,
@@ -155,9 +148,6 @@
 
 
 
-/* Buscador */
-
-
 .filtros input[type="text"]{
 
 
@@ -170,8 +160,6 @@
 
 
 
-
-/* Precio */
 
 
 .filtros input[type="number"]{
@@ -186,9 +174,6 @@
 
 
 
-/* Select */
-
-
 .filtros select{
 
 
@@ -200,9 +185,6 @@
 }
 
 
-
-
-/* Botón limpiar */
 
 
 .btn-limpiar{
@@ -253,11 +235,6 @@
 
 
 
-/* =====================
-   GRID PRODUCTOS
-===================== */
-
-
 .grid-productos{
 
 
@@ -273,9 +250,6 @@
 
 }
 
-
-
-/* cuando no hay productos */
 
 
 .grid-productos > h2{
@@ -296,10 +270,6 @@
 }
 
 
-
-
-
-/* Estados */
 
 
 .estado-carga,
@@ -323,10 +293,6 @@
 }
 
 
-
-
-
-/* RESPONSIVE */
 
 
 @media(max-width:900px){

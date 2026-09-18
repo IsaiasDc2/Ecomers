@@ -46,8 +46,7 @@ function ArmaTuPC({ agregarAlCarrito }) {
 
     .then(data=>{
 
-      // La API puede devolver el array directo (json-server)
-      // o un objeto { productos: [...] }. Cubrimos los dos casos.
+
       setProductos(Array.isArray(data) ? data : data.productos ?? []);
 
     })
@@ -55,7 +54,7 @@ function ArmaTuPC({ agregarAlCarrito }) {
     .catch(err=>{
 
       console.error("Error cargando productos:", err);
-      setProductos([]); // evita que productos quede undefined
+      setProductos([]); 
 
     });
 
@@ -72,7 +71,6 @@ function ArmaTuPC({ agregarAlCarrito }) {
 
 
 
-  // FILTRO DE COMPATIBILIDAD
 
   const productosDisponibles = (productos ?? []).filter(producto=>{
 
@@ -82,7 +80,6 @@ function ArmaTuPC({ agregarAlCarrito }) {
 
 
 
-    // compatibilidad procesador - mother
 
     if(
       categoriaActual==="Motherboard" &&
@@ -98,9 +95,6 @@ function ArmaTuPC({ agregarAlCarrito }) {
 
 
 
-
-
-    // compatibilidad RAM
 
     if(
       categoriaActual==="Memoria RAM" &&
